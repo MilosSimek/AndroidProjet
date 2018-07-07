@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:id="@+id/release_layout_card"
+        android:id="@+id/card_view"
         android:layout_width="match_parent"
         android:layout_height="110dp"
         android:layout_gravity="center"
@@ -27,19 +30,16 @@
                 android:paddingRight="110dp">
 
                 <TextView
-                    android:id="@+id/artist"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="Artist" />
 
                 <TextView
-                    android:id="@+id/album"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="Album" />
 
                 <TextView
-                    android:id="@+id/genre"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="Genre" />
@@ -106,3 +106,5 @@
 
 
     </android.support.v7.widget.CardView>
+
+</LinearLayout>

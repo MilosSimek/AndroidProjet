@@ -1,110 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context="com.example.android.pokus1.MainActivity">
 
-    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/card_view"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
         android:layout_width="match_parent"
-        android:layout_height="110dp"
-        android:layout_gravity="center"
-        card_view:cardBackgroundColor="@color/grey"
-        card_view:cardCornerRadius="4dp"
-        card_view:cardElevation="5dp"
-        card_view:cardUseCompatPadding="true">
+        android:layout_height="match_parent" />
 
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-
-            <LinearLayout
-                android:id="@+id/linearLayout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:orientation="vertical"
-                android:paddingRight="110dp">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="Artist" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="Album" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="Genre" />
-
-                <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:id="@+id/year"
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentLeft="true"
-                        android:text="Year:" />
-
-                    <TextView
-                        android:id="@+id/rate"
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentEnd="true"
-                        android:layout_alignParentTop="true"
-                        android:layout_marginEnd="82dp"
-                        android:text="Rate" />
-
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:id="@+id/have"
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentLeft="true"
-                        android:text="Have:" />
-
-                    <TextView
-                        android:id="@+id/users"
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentEnd="true"
-                        android:layout_alignParentTop="true"
-                        android:layout_marginEnd="81dp"
-                        android:text="Users" />
-
-                </RelativeLayout>
-
-            </LinearLayout>
-
-
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginRight="5dp"
-                android:layout_marginTop="5dp"
-                android:scaleType="centerCrop"
-                android:src="@mipmap/ic_launcher" />
-
-
-        </RelativeLayout>
-
-
-    </android.support.v7.widget.CardView>
-
-</LinearLayout>
+</android.support.design.widget.CoordinatorLayout>
