@@ -29,14 +29,12 @@ class MainActivity : AppCompatActivity() {
         layoutManager = LinearLayoutManager(this)
         recyclerView?.layoutManager = layoutManager
         val card = CardInfo("Metallica", "Kill em all", "Rock", 1988, 5, true, 10)
-        adapter = recycler
-        recycler.SetData(listOf(card))
-        recyclerView?.adapter = adapter
-        Thread.sleep(5000)
         val card2 = CardInfo("Metallica", "Kill em all", "Rock", 1988, 5, true, 10)
-        recycler.SetData(listOf(card2))
-    }
+        adapter = recycler
+        recycler.SetData(listOf(card, card2, card))
+        recyclerView?.adapter = adapter
 
+    }
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.
        // menuInflater.inflate(R.menu.menu_card_demo, menu)
