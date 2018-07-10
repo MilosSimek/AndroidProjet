@@ -1,5 +1,6 @@
 package com.example.android.pokus1
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.Toolbar
@@ -23,6 +24,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         //val toolbar = findViewById(R.id.toolbar) as Toolbar
         //setSupportActionBar(toolbar)
+
+        val intent = Intent(this, DiscogsService::class.java)
+        startService(intent)
 
         recyclerView = findViewById(R.id.recycler_view) as RecyclerView
 
