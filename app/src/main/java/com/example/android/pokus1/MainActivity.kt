@@ -1,6 +1,7 @@
 package com.example.android.pokus1
 
 import android.content.Intent
+import android.content.IntentFilter
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.Toolbar
@@ -18,13 +19,15 @@ class MainActivity : AppCompatActivity() {
     var layoutManager: RecyclerView.LayoutManager? = null
     var adapter: RecyclerView.Adapter<*>? = null
     var recycler: RecyclerAdapter = RecyclerAdapter()
+    var mReceiver: ArtistReleasesBroadcastReceiver? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         //val toolbar = findViewById(R.id.toolbar) as Toolbar
         //setSupportActionBar(toolbar)
-
+        mReceiver = ArtistReleasesBroadcastReceiver()
+        registerReceiver(mReceiver, IntentFilter("YourIntentAction"))
         val intent = Intent(this, DiscogsService::class.java)
         startService(intent)
 

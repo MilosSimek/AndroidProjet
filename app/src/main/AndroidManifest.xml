@@ -20,6 +20,8 @@
         <service
             android:name=".DiscogsService"
             android:exported="false"/>
+        <receiver android:name=".ArtistReleasesBroadcastReceiver" >
+        </receiver>
     </application>
 
 </manifest>

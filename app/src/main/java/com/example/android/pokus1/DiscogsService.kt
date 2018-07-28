@@ -1,10 +1,11 @@
 package com.example.android.pokus1
-
 import android.app.IntentService
 import android.content.Intent
+import android.os.Bundle
 import android.util.Log
-import com.beust.klaxon.Klaxon
+
 import com.example.android.pokus1.dto.ArtistReleases
+import tomatobean.jsonparser.parseJson
 
 class DiscogsService : IntentService("DiscogsService") {
 
@@ -12,8 +13,15 @@ class DiscogsService : IntentService("DiscogsService") {
         val discogs = Discogs.run("https://api.discogs.com/artists/108713/releases")
         Log.d("Discogs", discogs)
         try {
-            val ae = Klaxon().parse<ArtistReleases>(discogs)
+            val ae = discogs.parseJson(ArtistReleases::class)
+           // val ae = Klaxon().parse<ArtistReleases>(discogs)
             Log.d("Discogs", ae!!.artists.size.toString())
+
+            val intent = Intent("YourIntentAction")
+            intent.putExtra("Data", ae)
+            sendBroadcast(intent)
+
+
         } catch (e: Exception) {
             Log.d("Discogs", e.message.toString())
         }

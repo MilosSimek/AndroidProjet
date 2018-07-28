@@ -1,40 +1,41 @@
 package com.example.android.pokus1.dto
 
-import com.beust.klaxon.Json
+import tomatobean.jsonparser.JsonFormat
+import java.io.Serializable
 
-class Artist {
+class Artist : Serializable {
 
-    @Json(name = "status")
-    var status: String = ""
+    @JsonFormat(JsonName = "status")
+    lateinit var status: String
 
-    @Json(name = "thumb")
-    var thumb: String = ""
+    @JsonFormat(JsonName = "thumb")
+    lateinit var thumb: String
 
-    @Json(name = "title")
+    @JsonFormat(JsonName = "title")
     lateinit var title: String
 
-    @Json(name = "format")
-    var format: String = ""
+    @JsonFormat(JsonName = "format")
+    lateinit var format: String
 
-    @Json(name = "label")
-    var label: String = ""
+    @JsonFormat(JsonName = "label")
+    lateinit var label: String
 
-    @Json(name = "role")
-    var role: String = ""
+    @JsonFormat(JsonName = "role")
+    lateinit var role: String
 
-    @Json(name = "year")
-    var year: Int = 0
+    @JsonFormat(JsonName = "year")
+    lateinit var year: Integer
 
-    @Json(name = "resource_url")
-    var resource_url: String = ""
+    @JsonFormat(JsonName = "resource_url")
+    lateinit var resourceUrl: String
 
-    @Json(name = "artist")
-    var artist: String = ""
+    @JsonFormat(JsonName = "artist")
+    lateinit var artist: String
 
-    @Json(name = "type")
-    var type: String = ""
+    @JsonFormat(JsonName = "type")
+    lateinit var type: String
 
-    @Json(name = "id")
-    var id: Int = 0
+    @JsonFormat(JsonName = "id")
+    lateinit var id: Integer
 }
 

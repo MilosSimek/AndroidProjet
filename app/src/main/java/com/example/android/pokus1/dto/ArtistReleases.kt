@@ -1,10 +1,11 @@
 package com.example.android.pokus1.dto
 
-import com.beust.klaxon.Json
+import tomatobean.jsonparser.JsonFormat
+import java.io.Serializable
 
-class ArtistReleases{
+class ArtistReleases : Serializable{
 
-   @Json(name = "releases")
-   public var artists : Array<Artist> = arrayOf<Artist>()
+   @JsonFormat(JsonName = "releases")
+   lateinit var artists : Array<Artist>
 
 }
