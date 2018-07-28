@@ -9,6 +9,6 @@ class ArtistReleasesBroadcastReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context?, intent: Intent?) {
         Log.d("Test", intent!!.getSerializableExtra("data").toString())
     }
-
+// TODO Presunout do aktivity
 
 }
