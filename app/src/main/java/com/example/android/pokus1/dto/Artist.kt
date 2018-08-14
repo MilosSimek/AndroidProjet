@@ -5,32 +5,20 @@ import java.io.Serializable
 
 class Artist : Serializable {
 
-    @JsonFormat(JsonName = "status")
-    lateinit var status: String
-
     @JsonFormat(JsonName = "thumb")
     lateinit var thumb: String
 
     @JsonFormat(JsonName = "title")
     lateinit var title: String
 
-    @JsonFormat(JsonName = "format")
-    lateinit var format: String
+    @JsonFormat(JsonName = "uri")
+    lateinit var uri: String
 
-    @JsonFormat(JsonName = "label")
-    lateinit var label: String
-
-    @JsonFormat(JsonName = "role")
-    lateinit var role: String
-
-    @JsonFormat(JsonName = "year")
-    lateinit var year: Integer
+    @JsonFormat(JsonName = "cover_image")
+    lateinit var coverImage: String
 
     @JsonFormat(JsonName = "resource_url")
     lateinit var resourceUrl: String
-
-    @JsonFormat(JsonName = "artist")
-    lateinit var artist: String
 
     @JsonFormat(JsonName = "type")
     lateinit var type: String
@@ -38,4 +26,3 @@ class Artist : Serializable {
     @JsonFormat(JsonName = "id")
     lateinit var id: Integer
 }
-

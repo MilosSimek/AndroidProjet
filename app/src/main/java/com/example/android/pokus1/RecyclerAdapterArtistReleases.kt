@@ -4,21 +4,20 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.TextView
 
 
 
-class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
+class RecyclerAdapterArtistReleases : RecyclerView.Adapter<RecyclerAdapterArtistReleases.ViewHolder>() {
 
-    public fun SetData(data:List<CardInfo>){
+    public fun setArtistReleases(data:List<CardInfo>){
         this.data =data
         this.notifyDataSetChanged()
     }
 
     private var data: List<CardInfo> = ArrayList<CardInfo>()
 
-    //private val artists = arrayOf("Metallica", "Tri Sestry")
+    //private val artistReleases = arrayOf("Metallica", "Tri Sestry")
     //, "Chapter Two", "Chapter Three", "Chapter Four", "Chapter Five", "Chapter Six", "Chapter Seven", "Chapter Eight")
 
     //private val albums = arrayOf("Kill em all", "Na Kovarne")
@@ -48,8 +47,10 @@ class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
         return ViewHolder(v)
     }
 
+
+
     override fun onBindViewHolder(viewHolder: ViewHolder, i: Int) {
-        viewHolder.artist.text = "Artist:" + data.get(i).Artist
+        viewHolder.artist.text = "ArtistReleases:" + data.get(i).Artist
         viewHolder.album.text = "Album:" +data.get(i).Album
         viewHolder.genre.text = "Genre:" +data.get(i).Genre
     }
